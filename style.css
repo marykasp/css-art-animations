@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #73b0f4;
+  background-color: #c9acd1;
 }
 
 .container {
@@ -111,6 +111,7 @@ section.show {
 }
 
 /* Cat birthday animation */
+/* Birthday present */
 .box {
   height: 120px;
   width: 200px;
@@ -142,4 +143,74 @@ section.show {
   bottom: 8px;
   transform: rotate(20deg);
   transform-origin: left;
+}
+
+/* Cat Face */
+.cat {
+  position: relative;
+  bottom: 100px;
+  left: 40px;
+  z-index: -1;
+}
+
+.face {
+  height: 140px;
+  width: 120px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.lower {
+  height: 40px;
+  width: 140px;
+  background-color: #fff;
+  border-radius: 0 0 140px 140px;
+  position: relative;
+  top: 60px;
+  right: 10px;
+}
+
+.ear-l,
+.ear-r {
+  height: 0;
+  width: 0;
+  border-bottom: 35px solid white;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  position: relative;
+}
+
+.ear-l {
+  bottom: 53px;
+  transform: rotate(-40deg);
+}
+
+.ear-r {
+  bottom: 90px;
+  left: 81px;
+  transform: rotate(40deg);
+}
+
+.eye-l,
+.eye-r {
+  height: 15px;
+  width: 13px;
+  position: relative;
+}
+
+.eye-l {
+  bottom: 65px;
+  left: 20px;
+}
+
+.eye-r {
+  bottom: 80px;
+  left: 83px;
+}
+
+.eye {
+  background-color: #434343;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
 }
