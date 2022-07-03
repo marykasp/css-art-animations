@@ -148,7 +148,7 @@ section.show {
 /* Cat Face */
 .cat {
   position: relative;
-  bottom: 100px;
+  bottom: 40px;
   left: 40px;
   z-index: -1;
 }
@@ -213,4 +213,69 @@ section.show {
   height: 100%;
   width: 100%;
   border-radius: 50%;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  20% {
+    transform: scaleY(0);
+  }
+}
+
+.nose {
+  width: 0;
+  height: 0;
+  border-top: 10px solid pink;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: relative;
+  bottom: 72px;
+  left: 48px;
+}
+
+.hat {
+  height: 0;
+  width: 0;
+  border-bottom: 100px solid #ff6347;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  position: relative;
+  bottom: 220px;
+  left: 40px;
+  transform: rotate(10deg);
+}
+
+.deco {
+  position: relative;
+  right: 2px;
+  top: 2px;
+}
+
+.d1,
+.d2,
+.d3,
+.d4 {
+  background-color: #ffff9d;
+  position: relative;
+  height: 40px;
+  width: 5px;
+}
+
+.d1 {
+  bottom: 20px;
+}
+
+.d2 {
+  transform: rotate(45deg);
+  bottom: 60px;
+}
+
+.d3 {
+  transform: rotate(90deg);
+  bottom: 100px;
+}
+
+.d4 {
+  transform: rotate(135deg);
+  bottom: 140px;
 }
