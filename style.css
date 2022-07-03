@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #73b0f4;
+}
+
+.container {
+  height: 100vh;
+  width: 1920px;
+  color: #fff;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sidebar toggle menu */
+.toggle {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#arrow {
+  background-image: linear-gradient(
+    319deg,
+    #cdedfd 0%,
+    #ffec82 37%,
+    #ffcfd2 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* color: #73b0f4; */
+  font-size: 50px;
+  transition: 1s;
+}
+
+#arrow.active {
+  transform: rotate(-180deg);
+}
+
+.menu {
+  background-color: #fff;
+  position: absolute;
+  width: 100px;
+  top: 100px;
+  left: -100px;
+  border-radius: 0 0 15px 0;
+  padding-bottom: 20px;
+  transition: 0.8s;
+}
+
+.menu.active {
+  left: 0;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+}
+
+a > .material-icons {
+  font-size: 50px;
+  color: #d2d2d2;
+  transition: all 0.3s ease;
+}
+
+a:hover .material-icons {
+  background-image: linear-gradient(
+    319deg,
+    #cdedfd 0%,
+    #ffec82 37%,
+    #ffcfd2 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
+}
+
+/* Sections */
+section {
+  height: 500px;
+  width: 500px;
+  border: 5px solid #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: none;
+}
+
+section.show {
+  display: block;
+}
+
+/* Cat birthday animation */
+.box {
+  height: 120px;
+  width: 200px;
+  background-color: #ffff9d;
+  position: relative;
+  top: 300px;
+  left: 150px;
+  background-image: radial-gradient(#f7dd53 5px, transparent 5px);
+  background-size: 35px 35px;
+  background-position: -5px -12px;
+}
+
+.b1,
+.b2 {
+  background-color: #ffff9d;
+  height: 8px;
+  width: 50px;
+  position: relative;
+}
+
+.b1 {
+  right: 48px;
+  transform: rotate(-20deg);
+  transform-origin: right;
+}
+
+.b2 {
+  left: 199px;
+  bottom: 8px;
+  transform: rotate(20deg);
+  transform-origin: left;
+}
