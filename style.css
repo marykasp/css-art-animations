@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -151,6 +152,7 @@ section.show {
   bottom: 40px;
   left: 40px;
   z-index: -1;
+  transition: 1s;
 }
 
 .face {
@@ -278,4 +280,8 @@ section.show {
 .d4 {
   transform: rotate(135deg);
   bottom: 140px;
+}
+
+.box:hover .cat {
+  transform: translateY(-60px);
 }

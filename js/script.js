@@ -7,20 +7,46 @@ const body = document.querySelector("body");
 const birthday = document.querySelector(".birthday");
 const home = document.querySelector(".home");
 const container = document.querySelector(".container");
+const box = document.querySelector(".box");
 
 // Sections
 const celebrateSection = document.querySelector(".celebrate");
 const sections = document.querySelectorAll("section");
 
+const start = () => {
+  setTimeout(function () {
+    confetti.start();
+  }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+};
+
+//  for stopping the confetti
+
+const stop = () => {
+  setTimeout(function () {
+    confetti.stop();
+  }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+};
+
 toggle.addEventListener("click", () => {
   arrow.classList.toggle("active");
   menu.classList.toggle("active");
+  celebrateSection.classList.add("show");
+});
+
+box.addEventListener("mouseover", () => {
+  start();
+  celebrateSection.innerHTML += `<h2>Happy Birthday</h2>`;
+});
+
+box.addEventListener("mouseout", () => {
+  stop();
 });
 
 // Change body color background and show the css animation
 birthday.addEventListener("click", (e) => {
   // iterate over all the sections and remove the show class
   sections.forEach((item) => item.classList.remove("show"));
+
   // add show class to section with id of celebrate
   celebrateSection.classList.add("show");
 
