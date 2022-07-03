@@ -63,4 +63,5 @@ home.addEventListener("click", () => {
 
 window.addEventListener("load", () => {
   sections.forEach((item) => item.classList.remove("show"));
+  celebrateSection.classList.add("show");
 });
