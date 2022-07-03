@@ -8,6 +8,7 @@ const birthday = document.querySelector(".birthday");
 const home = document.querySelector(".home");
 const container = document.querySelector(".container");
 const box = document.querySelector(".box");
+const text = document.querySelector(".text");
 
 // Sections
 const celebrateSection = document.querySelector(".celebrate");
@@ -30,12 +31,11 @@ const stop = () => {
 toggle.addEventListener("click", () => {
   arrow.classList.toggle("active");
   menu.classList.toggle("active");
-  celebrateSection.classList.add("show");
 });
 
 box.addEventListener("mouseover", () => {
   start();
-  celebrateSection.innerHTML += `<h2>Happy Birthday</h2>`;
+  text.innerHTML = `<h2>Happy Birthday</h2>`;
 });
 
 box.addEventListener("mouseout", () => {
@@ -52,9 +52,15 @@ birthday.addEventListener("click", (e) => {
 
   // change background color of container
   body.style.backgroundColor = "#c9acd1";
+  text.innerHTML = "";
 });
 
 home.addEventListener("click", () => {
+  stop();
   body.style.backgroundColor = "#73b0f4";
+  sections.forEach((item) => item.classList.remove("show"));
+});
+
+window.addEventListener("load", () => {
   sections.forEach((item) => item.classList.remove("show"));
 });

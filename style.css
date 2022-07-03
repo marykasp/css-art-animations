@@ -6,7 +6,9 @@
 }
 
 body {
-  background-color: #c9acd1;
+  background-color: #73b0f4;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
 }
 
 .container {
@@ -97,7 +99,6 @@ a:hover .material-icons {
 section {
   height: 500px;
   width: 500px;
-  border: 5px solid #fff;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -111,6 +112,23 @@ section.show {
   display: block;
 }
 
+.text {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.text h2 {
+  font-size: 33px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  background-clip: text;
+  color: #f7dd53;
+  /* background-color: #f39f86;
+  background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%); */
+  transition: 1s;
+}
+
 /* Cat birthday animation */
 /* Birthday present */
 .box {
@@ -118,7 +136,7 @@ section.show {
   width: 200px;
   background-color: #ffff9d;
   position: relative;
-  top: 300px;
+  top: 230px;
   left: 150px;
   background-image: radial-gradient(#f7dd53 5px, transparent 5px);
   background-size: 35px 35px;
@@ -284,4 +302,16 @@ section.show {
 
 .box:hover .cat {
   transform: translateY(-60px);
+}
+
+.shadow {
+  background-color: #97819d;
+  height: 30px;
+  width: 250px;
+  border-radius: 50%;
+  position: relative;
+  top: 223px;
+  left: 125px;
+  opacity: 0.3;
+  z-index: -1;
 }
