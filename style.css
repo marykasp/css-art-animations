@@ -6,14 +6,14 @@
 }
 
 body {
-  background-color: #73b0f4;
+  background-color: #c9acd1;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
 }
 
 .container {
   height: 100vh;
-  width: 1920px;
+  /* width: 1920px; */
   color: #fff;
   margin: 0 auto;
   position: relative;

@@ -2,6 +2,7 @@ const toggle = document.querySelector("#toggle");
 const arrow = document.querySelector("#arrow");
 const menu = document.querySelector(".menu");
 const body = document.querySelector("body");
+const song = document.querySelector(".song");
 
 // Menu Selectors
 const birthday = document.querySelector(".birthday");
@@ -35,11 +36,13 @@ toggle.addEventListener("click", () => {
 
 box.addEventListener("mouseover", () => {
   start();
+  song.play();
   text.innerHTML = `<h2>Happy Birthday</h2>`;
 });
 
 box.addEventListener("mouseout", () => {
   stop();
+  song.pause();
 });
 
 // Change body color background and show the css animation
